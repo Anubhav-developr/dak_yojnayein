@@ -1,0 +1,16 @@
+.calc-controls {
+  display: flex; flex-direction: column; gap: 1.2rem; background: var(--surface);
+  border: 1px solid var(--line); border-radius: var(--radius-xl); padding: 2rem; box-shadow: var(--shadow-card);
+}
+.calc-controls__field label { display: block; font-size: 0.88rem; font-weight: 600; color: var(--muted); margin-bottom: 0.6rem; }
+.calc-controls__select { position: relative; }
+.calc-controls__select select {
+  width: 100%; appearance: none; padding: 1rem 3rem 1rem 1.2rem; border-radius: var(--radius-lg);
+  border: 1px solid var(--line); background: #faf8fe; font-weight: 600; font-size: 0.95rem;
+}
+.calc-controls__select svg { position: absolute; right: 1.1rem; top: 50%; transform: translateY(-50%); pointer-events: none; color: var(--muted); }
+.calc-controls__note {
+  display: flex; gap: 0.7rem; align-items: flex-start; padding: 0.9rem 1.1rem; border-radius: var(--radius-md);
+  background: #f3f0fa; border: 1px solid var(--line); font-size: 0.78rem; color: var(--muted);
+}
+.calc-controls__note svg { flex-shrink: 0; color: var(--green-500); margin-top: 2px; }

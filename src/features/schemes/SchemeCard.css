@@ -1,0 +1,37 @@
+.scheme-card {
+  position: relative; display: flex; flex-direction: column; gap: 1.1rem;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-xl);
+  padding: 1.6rem; box-shadow: var(--shadow-card);
+}
+.scheme-card.is-highlighted { border: 2px solid var(--amber-400); }
+
+.scheme-card__ribbon {
+  position: absolute; top: -11px; left: 1.4rem; display: inline-flex; align-items: center; gap: 0.3rem;
+  padding: 0.15rem 0.7rem; border-radius: var(--radius-pill); font-size: 0.66rem; font-weight: 700; color: #fff;
+}
+.scheme-card__ribbon--violet { background: var(--violet-600); }
+.scheme-card__ribbon--amber { background: var(--amber-500); }
+
+.scheme-card__top { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
+.scheme-card h3 { font-size: 1.3rem; font-weight: 700; margin-top: 0.6rem; }
+.scheme-card h3 a:hover { color: var(--violet-600); }
+.scheme-card__rate {
+  flex-shrink: 0; text-align: center; padding: 0.5rem 0.9rem; border-radius: var(--radius-md);
+  background: var(--amber-100); color: var(--amber-800); line-height: 1.2;
+}
+.scheme-card__rate strong { display: block; font-size: 1.45rem; font-weight: 800; }
+.scheme-card__rate span { font-size: 0.65rem; font-weight: 600; }
+
+.scheme-card__desc { font-size: 0.88rem; color: var(--muted); min-height: 3.2em; }
+
+.scheme-card__facts {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem 1rem; margin-top: auto;
+  padding: 1rem 1.1rem; border-radius: var(--radius-md); background: #f6f4fb; border: 1px solid var(--line);
+}
+.is-highlighted .scheme-card__facts { background: #fffaf0; border-color: #f7e3b0; }
+.scheme-card__facts dt { font-size: 0.72rem; color: var(--muted); }
+.scheme-card__facts dd { font-size: 0.95rem; font-weight: 700; }
+.scheme-card__tax { grid-column: 1 / -1; padding-top: 0.8rem; border-top: 1px solid var(--line); }
+.scheme-card__tax dd { display: flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; }
+.scheme-card__tax dd.is-exempt { color: var(--violet-700); }
+.scheme-card__tax dd.is-exempt svg { color: var(--green-500); }

@@ -1,0 +1,14 @@
+.logo { display: inline-flex; align-items: center; gap: 0.75rem; }
+.logo__mark {
+  display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px;
+  background: var(--violet-600); color: var(--amber-400); box-shadow: 0 6px 16px rgba(79, 63, 166, 0.35);
+}
+.logo__text { display: flex; flex-direction: column; line-height: 1.25; }
+.logo__name { font-size: 1.25rem; font-weight: 700; }
+.logo__name em { font-style: normal; color: var(--violet-600); }
+.logo__tagline { display: flex; align-items: center; gap: 0.4rem; font-size: 0.7rem; color: var(--muted); }
+.logo__tagline i { width: 6px; height: 6px; border-radius: 50%; background: var(--green-500); }
+
+.logo--inverse .logo__name { color: #fff; }
+.logo--inverse .logo__name em { color: #fff; }
+.logo--inverse .logo__mark { background: var(--amber-500); color: var(--ink-900); box-shadow: none; }

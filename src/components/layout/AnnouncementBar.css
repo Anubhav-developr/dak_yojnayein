@@ -1,0 +1,14 @@
+.announce { background: var(--ink-900); color: #d6cfee; font-size: 0.75rem; }
+.announce__inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 0.55rem; }
+.announce__lead { display: flex; align-items: center; gap: 0.75rem; min-width: 0; }
+.announce__pill {
+  display: inline-flex; align-items: center; gap: 0.4rem; flex-shrink: 0;
+  background: var(--amber-500); color: var(--ink-900); font-weight: 700;
+  padding: 0.15rem 0.7rem; border-radius: var(--radius-pill);
+}
+.announce__pill i { width: 6px; height: 6px; border-radius: 50%; background: var(--ink-900); }
+.announce__text { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.announce__rates { display: flex; gap: 1.5rem; flex-shrink: 0; }
+.announce__rates strong { color: var(--amber-400); }
+
+@media (max-width: 1100px) { .announce__rates { display: none; } }

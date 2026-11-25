@@ -1,0 +1,11 @@
+.picker > label { display: block; font-size: 0.88rem; font-weight: 600; color: var(--muted); margin-bottom: 0.6rem; }
+.picker__select { position: relative; }
+.picker__select select {
+  width: 100%; appearance: none; padding: 1rem 3rem 1rem 1.2rem; border-radius: var(--radius-lg);
+  border: 1px solid var(--line); background: #faf8fe; font-weight: 600; font-size: 0.95rem;
+}
+.picker__select svg { position: absolute; right: 1.1rem; top: 50%; transform: translateY(-50%); pointer-events: none; color: var(--muted); }
+.picker__facts { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin-top: 0.9rem; }
+.picker__facts > div { padding: 0.6rem 0.8rem; border-radius: var(--radius-sm); background: var(--violet-50); }
+.picker__facts dt { font-size: 0.68rem; color: var(--muted); }
+.picker__facts dd { font-size: 0.78rem; font-weight: 700; line-height: 1.4; }

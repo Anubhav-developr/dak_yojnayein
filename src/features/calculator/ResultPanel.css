@@ -1,0 +1,25 @@
+.result {
+  display: flex; flex-direction: column; justify-content: space-between; gap: 2.5rem; color: #fff;
+  background: linear-gradient(160deg, #241a47 0%, #1b1333 60%, #150e29 100%);
+  border-radius: var(--radius-xl); padding: 2.2rem; box-shadow: var(--shadow-float);
+}
+.result__head { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.result__eyebrow { display: flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; font-weight: 700; color: var(--amber-400); }
+.result__eyebrow i { width: 6px; height: 6px; border-radius: 50%; background: var(--amber-400); }
+.result__rate { padding: 0.25rem 0.85rem; border-radius: var(--radius-pill); background: rgba(245, 158, 11, 0.16); border: 1px solid rgba(245, 158, 11, 0.4); color: var(--amber-400); font-size: 0.75rem; font-weight: 700; }
+.result__value { font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 800; margin: 0.8rem 0 1.6rem; letter-spacing: -0.02em; }
+
+.result__bar { display: flex; height: 12px; border-radius: 99px; overflow: hidden; background: rgba(255, 255, 255, 0.1); }
+.result__bar-principal { background: #fff; transition: width 0.25s ease; }
+.result__bar-interest { background: var(--amber-400); transition: width 0.25s ease; }
+.result__legend { display: flex; justify-content: space-between; margin-top: 0.9rem; font-size: 0.78rem; color: #cfc8e8; }
+.result__legend span::before { content: ''; display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 0.5rem; }
+.result__legend-principal::before { background: #fff; }
+.result__legend-interest::before { background: var(--amber-400); }
+
+.result__boxes { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.result__boxes > div { padding: 1rem 1.2rem; border-radius: var(--radius-md); background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.1); }
+.result__boxes small { display: block; font-size: 0.72rem; color: #b9b0d6; }
+.result__boxes strong { font-size: clamp(1.1rem, 2.4vw, 1.5rem); font-weight: 800; }
+.result__box--interest { background: rgba(245, 158, 11, 0.1) !important; border-color: rgba(245, 158, 11, 0.35) !important; }
+.result__box--interest strong { color: var(--amber-400); }

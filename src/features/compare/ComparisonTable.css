@@ -1,0 +1,16 @@
+.table-wrap { overflow-x: auto; }
+.compare { width: 100%; min-width: 820px; border-collapse: collapse; font-size: 0.88rem; }
+.compare thead th {
+  background: #f1eef8; text-align: left; padding: 0.9rem 1rem; font-size: 0.75rem; font-weight: 600; color: var(--muted);
+}
+.compare thead th:first-child { border-radius: var(--radius-md) 0 0 var(--radius-md); }
+.compare thead th:last-child { border-radius: 0 var(--radius-md) var(--radius-md) 0; }
+.compare tbody th, .compare tbody td { padding: 1.05rem 1rem; text-align: left; border-bottom: 1px solid var(--line); font-weight: 500; }
+.compare tbody tr:hover { background: var(--violet-50); }
+.compare__name { display: flex; align-items: center; gap: 0.7rem; font-weight: 700; }
+.compare__name:hover { color: var(--violet-600); }
+.compare__dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.compare__dot--violet { background: var(--violet-600); }
+.compare__dot--amber { background: var(--amber-500); }
+.compare__rate { color: var(--violet-600); font-weight: 700 !important; }
+.compare__payout { color: var(--muted); }

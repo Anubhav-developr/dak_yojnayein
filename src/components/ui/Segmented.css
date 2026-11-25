@@ -1,0 +1,9 @@
+.seg-field__label { display: block; font-size: 0.88rem; font-weight: 600; color: var(--muted); margin-bottom: 0.5rem; }
+.seg { display: flex; gap: 4px; padding: 4px; background: #f1eef9; border-radius: var(--radius-md); }
+.seg__btn {
+  flex: 1; padding: 0.55rem 0.6rem; border: 0; border-radius: 10px; background: transparent;
+  font-size: 0.82rem; font-weight: 600; color: var(--muted); transition: all 0.15s;
+}
+.seg__btn:hover { color: var(--text); }
+.seg__btn.is-active { background: var(--surface); color: var(--violet-600); box-shadow: 0 2px 8px rgba(61, 47, 143, 0.14); }
+.seg-field__help { margin-top: 0.5rem; font-size: 0.75rem; color: var(--muted); line-height: 1.6; }

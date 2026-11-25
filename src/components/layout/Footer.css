@@ -1,0 +1,12 @@
+.footer { background: var(--ink-900); color: #b9b0d6; padding-top: 64px; font-size: 0.85rem; }
+.footer__grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 3rem; padding-bottom: 48px; }
+.footer__about p { margin: 1.2rem 0; max-width: 40ch; line-height: 1.8; }
+.footer__guarantee { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--mint-400); font-weight: 600; font-size: 0.8rem; }
+.footer__col h3 { color: #fff; font-size: 0.95rem; margin-bottom: 1rem; }
+.footer__col li + li { margin-top: 0.6rem; }
+.footer__col a:hover { color: #fff; }
+.footer__phone { margin-bottom: 0.5rem; }
+.footer__phone a { color: var(--mint-400); font-weight: 700; font-size: 1.05rem; }
+.footer__legal { border-top: 1px solid rgba(255, 255, 255, 0.08); padding-block: 1.5rem; font-size: 0.75rem; color: #8a80ad; }
+
+@media (max-width: 860px) { .footer__grid { grid-template-columns: 1fr; gap: 2rem; } }

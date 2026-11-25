@@ -1,0 +1,9 @@
+.tax-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.4rem; }
+.tax-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 1.5rem; box-shadow: var(--shadow-card); }
+.tax-card header { display: flex; flex-direction: column; align-items: flex-start; gap: 0.7rem; margin-bottom: 1.1rem; }
+.tax-card h3 { font-size: 1.1rem; font-weight: 700; }
+.tax-card h3 a:hover { color: var(--violet-600); }
+.tax-card__row { display: flex; justify-content: space-between; padding: 0.7rem 0; border-top: 1px solid var(--line); font-size: 0.88rem; }
+.tax-card__row dt { color: var(--muted); }
+.tax-card__row dd { display: flex; align-items: center; gap: 0.35rem; font-weight: 700; }
+.tax-card__row dd.is-yes { color: var(--green-700); }
