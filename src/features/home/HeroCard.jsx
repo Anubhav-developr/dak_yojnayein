@@ -1,7 +1,13 @@
+import { lazy, Suspense } from 'react';
 import Badge from '../../components/ui/Badge';
 import Icon from '../../components/ui/Icon';
+import SafeBoundary from '../../components/ui/SafeBoundary';
 import PassbookArt from './PassbookArt';
+import Postmark from './Postmark';
 import './HeroCard.css';
+
+// three.js is code-split: it only downloads when the hero is rendered.
+const Hero3D = lazy(() => import('./Hero3D'));
 
 export default function HeroCard() {
   return (
@@ -12,7 +18,11 @@ export default function HeroCard() {
       </div>
 
       <div className="hero-card__art">
-        <PassbookArt />
+        <SafeBoundary fallback={<PassbookArt />}>
+          <Suspense fallback={<PassbookArt />}>
+            <Hero3D fallback={<PassbookArt />} />
+          </Suspense>
+        </SafeBoundary>
         <div className="hero-card__assure">
           <span><Icon name="trophy" size={16} /></span>
           <div>
@@ -20,6 +30,7 @@ export default function HeroCard() {
             <strong>100% सुरक्षित</strong>
           </div>
         </div>
+        <Postmark />
       </div>
 
       <div className="hero-card__foot">

@@ -2,7 +2,10 @@
   position: relative; display: flex; flex-direction: column; gap: 1.1rem;
   background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-xl);
   padding: 1.6rem; box-shadow: var(--shadow-card);
+  transform: perspective(900px) translateY(var(--lift, 0)) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform 0.25s ease, box-shadow 0.25s ease; will-change: transform;
 }
+.scheme-card:hover { box-shadow: var(--shadow-float); }
 .scheme-card.is-highlighted { border: 2px solid var(--amber-400); }
 
 .scheme-card__ribbon {

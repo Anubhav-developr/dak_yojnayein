@@ -2,13 +2,21 @@ import { Link } from 'react-router';
 import Badge from '../../components/ui/Badge';
 import Button from '../../components/ui/Button';
 import Icon from '../../components/ui/Icon';
+import { useTilt } from '../../hooks/useTilt';
 import './SchemeCard.css';
 
 export default function SchemeCard({ scheme }) {
   const { id, name, rate, tag, ribbon, highlighted, description, tenureLabel, minDeposit, taxStatus, taxExempt } = scheme;
 
+  const tilt = useTilt();
+
   return (
-    <article className={`scheme-card ${highlighted ? 'is-highlighted' : ''}`}>
+    <article
+      ref={tilt.ref}
+      onPointerMove={tilt.onPointerMove}
+      onPointerLeave={tilt.onPointerLeave}
+      className={`scheme-card ${highlighted ? 'is-highlighted' : ''}`}
+    >
       {ribbon && (
         <span className={`scheme-card__ribbon scheme-card__ribbon--${ribbon.tone}`}>
           <Icon name="star" size={11} /> {ribbon.label}

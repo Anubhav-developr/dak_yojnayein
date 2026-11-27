@@ -1,3 +1,5 @@
 .scheme-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; padding-top: 12px; }
 @media (max-width: 1100px) { .scheme-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 700px) { .scheme-grid { grid-template-columns: 1fr; } }
+.scheme-grid__cell { display: flex; }
+.scheme-grid__cell > .scheme-card { flex: 1; }

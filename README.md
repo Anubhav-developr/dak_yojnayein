@@ -34,6 +34,21 @@ Har scheme ka apna engine (`src/calc/`) aur apna panel/layout (`features/calcula
 
 Rates / limits: `src/data/calcConfig.js` (Q3 FY 2026-27). Quarterly update sirf yahin karna hai.
 
+## 3D (three.js)
+- Hero: India Post pillar box, 5 airmail envelopes orbiting it, passbook, ₹ coins (pointer parallax + scroll).
+- Calculator: 3D coin stacks, silver = principal, gold = interest, coins drop in/out as values change.
+- `src/three/`: `Stage.jsx` (renderer, studio lighting, shadows, resize, pause when off-screen, dispose),
+  `models/` (pillarBox, envelope, coin, passbook), `scenes/`, `textures.js` (canvas textures), `materials.js`.
+- three.js alag chunk me lazy-load hota hai. WebGL na ho / error aaye to purana 2D SVG fallback dikhta hai.
+- `prefers-reduced-motion`: animation band, ek static frame render hota hai.
+
+### Blender se banaya hua model lagana
+1. Blender me model banao: 1 unit ~ 1 metre, base origin pe, **+Y up** (export me "+Y Up" on).
+2. File > Export > glTF 2.0 > **glTF Binary (.glb)**, "Apply Modifiers" on, materials on.
+3. File ko `public/models/postbox.glb` (ya `passbook.glb`) me rakho.
+4. `src/three/modelConfig.js` me path set karo: `postBox: '/models/postbox.glb'`.
+   Model automatically scale/centre hoke procedural model ki jagah load hoga. Fail hua to procedural wapas.
+
 ## Structure
 ```
 src/

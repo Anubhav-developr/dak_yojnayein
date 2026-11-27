@@ -28,3 +28,7 @@
 .result__info { padding: 1rem 1.2rem; border-radius: var(--radius-md); background: rgba(255, 255, 255, 0.06); border: 1px dashed rgba(255, 255, 255, 0.25); font-size: 0.82rem; color: #e4def6; line-height: 1.8; }
 .result__info b { color: var(--amber-400); }
 .result__info--warn { background: rgba(245, 158, 11, 0.1); border-color: rgba(245, 158, 11, 0.45); }
+
+/* 3D coin stacks (silver = principal, gold = interest) */
+.coin-visual { height: 150px; margin: -0.2rem 0 0.2rem; }
+.coin-visual:empty { display: none; }

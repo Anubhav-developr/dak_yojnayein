@@ -5,9 +5,13 @@
 .hero-card__head { display: flex; justify-content: space-between; align-items: center; padding: 0.4rem 0.4rem 1rem; }
 .hero-card__head p { display: flex; align-items: center; gap: 0.5rem; font-size: 0.78rem; font-weight: 600; }
 .hero-card__head i { width: 8px; height: 8px; border-radius: 50%; background: var(--green-500); }
-.hero-card__art { position: relative; aspect-ratio: 4 / 3; border-radius: var(--radius-lg); overflow: hidden; }
+.hero-card__art {
+  position: relative; aspect-ratio: 1 / 1.02; border-radius: var(--radius-lg); overflow: hidden;
+  background: radial-gradient(70% 55% at 50% 40%, #fff8e8 0%, #efe8fc 68%, #e3daf7 100%);
+}
+.hero-card__art .stage { position: absolute; inset: 0; }
 .hero-card__assure {
-  position: absolute; right: 14px; bottom: 14px; display: flex; align-items: center; gap: 0.6rem;
+  position: absolute; left: 14px; top: 14px; display: flex; align-items: center; gap: 0.6rem;
   background: var(--surface); padding: 0.55rem 0.9rem 0.55rem 0.55rem; border-radius: var(--radius-md); box-shadow: var(--shadow-card);
 }
 .hero-card__assure span { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: var(--amber-500); color: #fff; }

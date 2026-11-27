@@ -1,3 +1,4 @@
+import CoinVisual from './CoinVisual';
 import { formatINR } from '../../utils/format';
 import './ResultCard.css';
 
@@ -21,6 +22,8 @@ export default function ResultCard({ eyebrow, badge, headline, bar, stats = [], 
         </div>
         <p className="result__value">{typeof headline.value === 'number' ? formatINR(headline.value) : headline.value}</p>
         {headline.sub && <p className="result__sub">{headline.sub}</p>}
+
+        {bar && <CoinVisual principal={bar.principal} interest={bar.interest} />}
 
         {bar && (
           <>
